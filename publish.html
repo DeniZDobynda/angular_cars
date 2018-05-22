@@ -1,0 +1,142 @@
+<section id="publish">
+    <h1>Publish</h1>
+    <div id="topic" class="row-fluid">
+        <div id="topic-inner">
+            <div id="top-content" class="span9">
+                <div class="twpara-row row-fluid">
+                    <div id="4FV3e2TP" class="span12 tw-para ">
+                        <div class="ptext"><p>Please, send us all needed information about car you want to
+                            sell.&nbsp;</p>
+                        </div>
+                        <div class="pobj obj-after" ng-controller="publishController">
+                            <form class="form-horizontal" name="feedback" id="F4FV3e2TP"
+                                  ng-submit="send()"
+                                  action="javascript:void(0);"
+                                  enctype="multipart/form-data" novalidate>
+                                <div class="control-group"><label class="control-label required"
+                                                                  for="name">Name</label>
+                                    <div class="controls"><input type="text" name="name" id="name" value="" ng-value="car.name"
+                                                                 maxlength="50" class="input-large"
+                                                                 required ng-model="name">
+                                    </div>
+                                </div>
+                                <div class="control-group"><label class="control-label"
+                                                                  for="email">Email</label>
+                                    <div class="controls"><input type="email" name="email" id="email"
+                                                                 value=""
+                                                                 ng-model="email"
+                                                                 class="input-large"
+                                                                 pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,20})+$"
+                                                                 title="Field Email must be a valid email address !">
+                                    </div>
+                                </div>
+                                <div class="control-group"><label class="control-label"
+                                                                  for="transmission">Transmission</label>
+                                    <div class="controls"><select name="transmission" id="transmission" class="input-large" ng-model="transmission"
+                                                                  ng-options="transmission.value as transmission.label for transmission in transmissions">
+                                        <option value=""></option>
+
+                                    </select></div>
+                                </div>
+                                <div class="control-group"><label class="control-label"
+                                                                  for="price">Price</label>
+                                    <div class="controls"><input type="number" step="1" name="price"
+                                                                 id="price"
+                                                                 ng-model="price"
+                                                                 value="" class="input-medium"
+                                                                 pattern="^[0-9]*$"
+                                                                 title="Field Price : only numeric characters allowed !">
+                                    </div>
+                                </div>
+                                <div class="control-group"><label class="control-label required"
+                                                                  for="description">Description</label>
+                                    <div class="controls"><textarea name="description" id="description"
+                                                                    value=""
+                                                                    ng-model="description"
+                                                                    rows="10" class="input-xlarge"
+                                                                    required></textarea></div>
+                                </div>
+                                <div class="control-group"><label class="control-label required"
+                                                                  for="city">City</label>
+                                    <div class="controls"><input type="text" name="city" id="city" value=""
+                                                                 maxlength="50" class="input-large"
+                                                                 ng-model="city"
+                                                                 required>
+                                    </div>
+                                </div>
+                                <div class="control-group"><label class="control-label required"
+                                                                  for="color">Color</label>
+                                    <div class="controls"><input type="text" name="color" id="color" value=""
+                                                                 maxlength="50" class="input-large" ng-model="color">
+                                    </div>
+                                </div>
+                                <div class="control-group"><label class="control-label required"
+                                                                  for="fuel">Fuel</label>
+                                    <div class="controls"><input type="text" name="fuel" id="fuel" value=""
+                                                                 maxlength="50" class="input-large" ng-model="fuel">
+                                    </div>
+                                </div>
+                                <div class="control-group"><label class="control-label required"
+                                                                  for="abs">Abs</label>
+                                    <div class="controls"><input type="checkbox" name="abs" id="abs" class="input-large" ng-model="abs">
+                                    </div>
+                                </div>
+                                <div class="control-group"><label class="control-label required"
+                                                                  for="clock">Central lock</label>
+                                    <div class="controls"><input type="checkbox" name="clock" id="clock" class="input-large" ng-model="clock">
+                                    </div>
+                                </div>
+                                <div class="control-group"><label class="control-label required"
+                                                                  for="abag">Airbag</label>
+                                    <div class="controls"><input type="checkbox" name="abag" id="abag"class="input-large" ng-model="airbag">
+                                    </div>
+                                </div>
+                                <div class="control-group"><label class="control-label required"
+                                                                  for="run">Run</label>
+                                    <div class="controls"><input type="number" name="run" id="run" value=""
+                                                                 ng-model="run"
+                                                                 maxlength="50" class="input-large">
+                                    </div>
+                                </div>
+
+                                <div class="control-group"><label class="control-label"
+                                                                  for="image">Image</label>
+                                    <div class="controls input-xlarge"
+                                    "><input type="hidden" name="MAX_FILE_SIZE" value="2048000"><input
+                                            type="hidden" name="f2mauthext" value=".jpg|.png|.gif"><input
+                                            type="file" name="FilenameUpload" id="FilenameUpload"
+                                            style="display:none">
+                                    <div class="input-append input-xxlarge"><input type="text"
+                                                                                   id="FilenameUploadProxyEdit"
+                                                                                   class="input-xxlarge max-filebtn-width"
+                                                                                   disabled readonly><a
+                                            class="btn" id="FilenameUploadProxyBtn"><i class="fa fa-file">
+                                        <!----></i></a></div>
+                                </div>
+                        </div>
+                        <div class="control-group"><label class="control-label" for="phone">Phone</label>
+                            <div class="controls"><span class="hint-before">+380 (97) 123 45 67</span><input
+                                    type="text" name="phone" id="phone" value="" maxlength="15"
+                                    class="input-medium" pattern="^[A-Za-z0-9]*$"
+                                    ng-model="phone"
+                                    title="Field Phone : only alphabetic and numeric characters allowed !">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        </form></div>
+                </div>
+            </div>
+        </div>
+        <div id="top-sb" class="span3">
+            <div id="8VE3UzP0" class="tw-para twps-panel"><h2>Contact Information</h2>
+                <div class="ptext"><p>999 Lauyan Blvd<br>Los Angeles, CA 91350<br>USA<br><br>Phone: (888)
+                    123-4567<br>Fax: (887) 123-4567<br><a onclick="javascript:return(decMail2(this));"
+                                                          href="znvygb?pbagnpg#lbhefvgr.pbz"
+                                                          id="lnk42984f7a">contact@yoursite.com</a><br>Skype
+                    : your-skype-id<br><br>Mon to Fri: 8:00am - 5:00pm</p></div>
+            </div>
+        </div>
+    </div>
+</section>

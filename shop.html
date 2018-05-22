@@ -1,0 +1,232 @@
+<h1>Shop</h1>
+<div id="topic" class="row-fluid">
+    <div id="topic-inner">
+        <div id="top-content" class="span12" ng-controller="shopController">
+
+            <br>
+            <div class="row-fluid" ng-repeat="car in cars">
+                <ul class="thumbnails">
+                    <li class="span12">
+                        <div class="thumbnail"><a href="#/shop/{{car.id}}"><img class=" frm-wide-border"
+                                                                                id="shop-item-image"
+                                                                                data-src="_media/img/thumb/pic476f.tmp.jpg"
+                                                                                data-srcset="_media/img/small/pic476f.tmp.jpg 3x"
+                                                                                style="max-width:100%;"
+                                                                                alt=""
+                                                                                data-zoom-image="_media/img/large/pic476f.tmp.jpg"></a>
+                            <div class="caption"><h3><a href="#/shop/{{car.id}}">{{car.name}}</a></h3>
+                                <p>{{car.description}}</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--<div class="row-fluid">-->
+            <!--<ul class="thumbnails">-->
+            <!--<li class="span12">-->
+            <!--<div class="thumbnail"><a href="shop-lamborghini-murcielago.html"><img-->
+            <!--data-src="_media/img/thumb/1g-640.jpg"-->
+            <!--data-srcset="_media/img/small/1g-640.jpg 3x"-->
+            <!--style="max-width:100%;width:160px;" alt=""-->
+            <!--data-zoom-image="_media/img/medium/1g-640.jpg"></a>-->
+            <!--<div class="caption"><h3><a href="shop-lamborghini-murcielago.html">Lamborghini-->
+            <!--Murcielago</a></h3>-->
+            <!--<p>2010 Lamborghini Murcielago LP670-4 SV car #095 finished in 1 of-->
+            <!--1&nbsp;</p>-->
+            <!--<div id="NmCUuq">&lt;!&ndash;&ndash;&gt;</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="row-fluid">-->
+            <!--<ul class="thumbnails">-->
+            <!--<li class="span12">-->
+            <!--<div class="thumbnail"><a href="shop-porsche-carrera-gt.html"><img-->
+            <!--data-src="_media/img/thumb/s-l1600.jpg"-->
+            <!--data-srcset="_media/img/small/s-l1600.jpg 3x"-->
+            <!--style="max-width:100%;width:160px;" alt=""-->
+            <!--data-zoom-image="_media/img/large/s-l1600.jpg"></a>-->
+            <!--<div class="caption"><h3><a href="shop-porsche-carrera-gt.html">Porsche Carrera-->
+            <!--GT</a></h3>-->
+            <!--<p>Not a lot of description necessary here, I have previously listed this-->
+            <!--car over a year ago for 1.9mm. &nbsp;<br></p>-->
+            <!--<div id="ii54iU">&lt;!&ndash;&ndash;&gt;</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="row-fluid">-->
+            <!--<ul class="thumbnails">-->
+            <!--<li class="span12">-->
+            <!--<div class="thumbnail"><a href="shop-bmw-m6-2dr-coupe.html"><img-->
+            <!--data-src="_media/img/thumb/17376265-1.jpg"-->
+            <!--data-srcset="_media/img/small/17376265-1.jpg 3x"-->
+            <!--style="max-width:100%;width:160px;" alt=""-->
+            <!--data-zoom-image="_media/img/medium/17376265-1.jpg"></a>-->
+            <!--<div class="caption"><h3><a href="shop-bmw-m6-2dr-coupe.html">BMW M6 2dr-->
+            <!--Coupe</a></h3>-->
+            <!--<p>Euro Motorcars Mercedes Benz - Hundreds of new and pre-owned cars in-->
+            <!--stock - The finest selection of used highline vehicles in the country - -->
+            <!--Free Shipping, inquire for details<br></p>-->
+            <!--<div id="GDSkbd">&lt;!&ndash;&ndash;&gt;</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="row-fluid">-->
+            <!--<ul class="thumbnails">-->
+            <!--<li class="span12">-->
+            <!--<div class="thumbnail"><a href="shop-ford-ford-gt-heritage-edition.html"><img-->
+            <!--data-src="_media/img/thumb/404026a6495c1d-low-res-2006-ford-gt-heritage-edition.jpg"-->
+            <!--data-srcset="_media/img/small/404026a6495c1d-low-res-2006-ford-gt-heritage-edition.jpg 3x"-->
+            <!--style="max-width:100%;width:160px;" alt=""-->
+            <!--data-zoom-image="_media/img/large/404026a6495c1d-low-res-2006-ford-gt-heritage-edition.jpg"></a>-->
+            <!--<div class="caption"><h3><a href="shop-ford-ford-gt-heritage-edition.html">Ford-->
+            <!--Ford GT Heritage Edition</a></h3>-->
+            <!--<p>Looking to invest in a timeless thoroughbred?</p>-->
+            <!--<div id="Pu6Tju">&lt;!&ndash;&ndash;&gt;</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="row-fluid">-->
+            <!--<ul class="thumbnails">-->
+            <!--<li class="span12">-->
+            <!--<div class="thumbnail"><a href="shop-nissan-gt-r-skyline.html"><img-->
+            <!--data-src="_media/img/thumb/s-l1600-9.jpg"-->
+            <!--data-srcset="_media/img/small/s-l1600-9.jpg 3x"-->
+            <!--style="max-width:100%;width:160px;" alt=""-->
+            <!--data-zoom-image="_media/img/large/s-l1600-9.jpg"></a>-->
+            <!--<div class="caption"><h3><a href="shop-nissan-gt-r-skyline.html">Nissan GT-R-->
+            <!--Skyline</a></h3>-->
+            <!--<p>This is a once in a lifetime opportunity to own a pice of-->
+            <!--history!&nbsp;</p>-->
+            <!--<div id="8xPTKE">&lt;!&ndash;&ndash;&gt;</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--<br>-->
+
+        </div>
+    </div>
+</div>
+</div>
+
+<script>function ucc() {
+    var a;
+    if (typeof window.sessionStorage != "undefined") a = sessionStorage.getItem("scitR") || ""; else a = $.cookie("scitR");
+    if (!a || a == "") b = 0; else {
+        var b = 0;
+        var c = 0;
+        do {
+            c = a.indexOf(")", c);
+            if (c > 0) {
+                e = c - 1;
+                while (e >= 0 && a[e] != "=") e--;
+                b += parseInt(a.substring(e + 1, c));
+                c++
+            }
+        } while (c > 0)
+    }
+    $("#sc_pcount").text(b)
+}
+
+function decMail2(e) {
+    var s = "" + e.href, n = s.lastIndexOf("/"), w;
+    if (s.substr(0, 7) == "mailto:") return (true);
+    if (n > 0) s = s.substr(n + 1);
+    s = s.replace("?", ":").replace("#", "@").replace(/[a-z]/gi, function (t) {
+        return String.fromCharCode(t.charCodeAt(0) + (t.toLowerCase() < "n" ? 13 : -13));
+    });
+    e.href = s;
+    return (true);
+}
+
+function onChangeSiteLang(href) {
+    var i = location.href.indexOf("?");
+    if (i > 0) href += location.href.substr(i);
+    document.location.href = href;
+}</script>
+<script>$(document).ready(function () {
+    $("#NNLTxL").html(dosc("dp", "NNLTxL", false, true, false, true));
+    dosc("up", "NNLTxL", true);
+    $("#NmCUuq").html(dosc("dp", "NmCUuq", false, true, false, true));
+    dosc("up", "NmCUuq", true);
+    $("#ii54iU").html(dosc("dp", "ii54iU", false, true, false, true));
+    dosc("up", "ii54iU", true);
+    $("#GDSkbd").html(dosc("dp", "GDSkbd", false, true, false, true));
+    dosc("up", "GDSkbd", true);
+    $("#Pu6Tju").html(dosc("dp", "Pu6Tju", false, true, false, true));
+    dosc("up", "Pu6Tju", true);
+    $("#8xPTKE").html(dosc("dp", "8xPTKE", false, true, false, true));
+    dosc("up", "8xPTKE", true);
+    ucc();
+    if (typeof window.sessionStorage != "undefined") $("#button-cart").popover({
+        placement: "bottom",
+        html: true,
+        content: function () {
+            return sessionStorage.getItem("scitR-popover") || "<small>YOUR SHOPPING CART IS EMPTY</small>"
+        },
+        trigger: "hover"
+    });
+    $("#searchbox > input").click(function () {
+        $(this).select();
+    });
+    if (location.href.indexOf("?") > 0 && location.href.indexOf("twtheme=no") > 0) {
+        if (typeof twLzyLoad !== "undefined") {
+            window.addEventListener("load", twLzyLoad);
+            window.addEventListener("scroll", twLzyLoad);
+            window.addEventListener("resize", twLzyLoad);
+        }
+        $("#toolbar1,#toolbar2,#toolbar3,#footersmall,#footerfat").hide();
+        var idbmk = location.href;
+        idbmk = idbmk.substring(idbmk.lastIndexOf("#") + 1, idbmk.lastIndexOf("?"));
+        if (idbmk != "") $("html,body").animate({scrollTop: $("#" + idbmk).offset().top}, 0);
+    }
+    $("#site").prepend("<a href='javascript:void(0)' class='toTop' title='Top of page'><i class='fa fa-chevron-up fa-2x toTopLink'></i></a>");
+    var offset = 220;
+    var duration = 500;
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > offset) {
+            $(".toTop").fadeIn(duration);
+        } else {
+            $(".toTop").fadeOut(duration);
+        }
+    });
+    $(".toTop").click(function (event) {
+        event.preventDefault();
+        $("html, body").animate({scrollTop: 0}, duration);
+        return (false);
+    });
+
+    function isElemVisible(el, treshold) {
+        var rc = el.getBoundingClientRect();
+        return (rc.top <= window.innerHeight - treshold * (rc.bottom - rc.top) / 100);
+    }
+
+    function twLzyLoad() {
+        var elems = [].slice.call(document.querySelectorAll("img[data-src]"));
+        elems.forEach(function (e) {
+            if (isElemVisible(e, 0)) {
+                var scs = e.getAttribute("data-srcset");
+                e.setAttribute("src", e.getAttribute("data-src"));
+                e.removeAttribute("data-src");
+                if (scs) {
+                    e.setAttribute("srcset", scs);
+                    e.removeAttribute("data-srcset");
+                }
+            }
+        })
+    }
+
+    window.addEventListener("load", twLzyLoad);
+    window.addEventListener("scroll", twLzyLoad);
+    window.addEventListener("resize", twLzyLoad);
+    if (typeof onTOWebPageLoaded == "function") onTOWebPageLoaded();
+});</script>

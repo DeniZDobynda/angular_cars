@@ -1,0 +1,48 @@
+<section id="main">
+    <h1>Check out best offers</h1>
+    <div id="topic" class="row-fluid">
+        <div id="topic-inner">
+            <div id="top-content" class="span9" ng-controller="carsController">
+                <ul>
+                    <li class="twpara-row row-fluid media" ng-repeat="car in cars">
+                        <div id="heqHlINw" class="span12 tw-para ">
+                            <h2><i class="fa fa-cogs ">&nbsp;</i>Sale</h2>
+                            <div class="pobj float-l">
+                                <a href="_media/img/large/pic2e5c.tmp.jpg" rel="GsUK">
+                                    <img
+                                            data-src="_media/img/small/pic2e5c.tmp.jpg"
+                                            data-srcset="_media/img/medium/pic2e5c.tmp.jpg 1.6x,_media/img/large/pic2e5c.tmp.jpg 2.13x"
+                                            style="max-width:100%;width:320px" alt="">
+                                </a>
+                            </div>
+                            <div class="ptext">
+                                <p><strong>{{car.name}}</strong></p>
+                                <p>{{car.description}}</p>
+                                <p style="text-align: right; "><a class="btn" href="#/shop/{{car.id}}">More...</a>
+                                </p></div>
+
+                            <div align="right">
+                                <div align="right">
+                                    <div class="twsharebtnbar"
+                                         style="width:100%;height:21px;margin-top:4px;display:inline;">
+                                        <div style="float:right; display:block; width:100px; height:21px; overflow:hidden">
+                                            <script src="http://platform.linkedin.com/in.js"
+                                                    type="text/javascript"> lang: en_EN</script>
+                                            <script type="IN/Share" data-counter="right"></script>
+                                        </div>
+                                        <!--<div style="float:right; display:block; width:100px; height:21px">-->
+                                            <!--<script>document.writeln('<iframe src="http://www.facebook.com/plugins/like.php?href=' + encodeURIComponent("") + '&layout=button_count&show_faces=false&width=100&action=like&font=verdana&colorscheme=light&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>');</script>-->
+                                        <!--</div>-->
+                                        <div style="float:right; display:block;"><a
+                                                style="padding:0 2px 0 2px;width:100px" href="https://twitter.com/share"
+                                                class="twitter-share-button" data-url="" data-lang="en">Tweet</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

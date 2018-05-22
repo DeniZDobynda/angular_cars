@@ -1,0 +1,4 @@
+ErrorDocument 403 /_error-msg.php
+ErrorDocument 404 /_error-msg.php
+ErrorDocument 502 /_error-msg.php
+ErrorDocument 504 /_error-msg.php
